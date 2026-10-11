@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="SYNAPSE 2026 - quiz and circuit contest by the Dept. of CSE (AIML &amp; CSBS), IEM Salt Lake">
+<title>SYNAPSE 2026 | Dept. of CSE (AIML &amp; CSBS), IEM Salt Lake</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- DIGITAL CLOCK BAR (always on top) -->
+<div class="topbar" role="status">
+  <span class="tb-left">Dept. of CSE (AIML &amp; CSBS), IEM Salt Lake</span>
+  <span class="tb-clock"><span id="dateLine">--</span><strong id="clock" aria-label="Current time in India">00:00:00</strong><span class="tz">IST</span></span>
+</div>
+
+<header class="nav-wrap">
+  <nav class="nav" aria-label="Main">
+    <a class="brand" href="#home" aria-label="SYNAPSE home">
+      <svg viewBox="0 0 40 40" width="34" height="34" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="6" fill="#ff6a13"/><path d="M20 2v10M20 28v10M2 20h10M28 20h10" stroke="currentColor" stroke-width="2"/></svg>
+      <span>SYNAPSE</span>
+    </a>
+    <ul id="menu" class="menu">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#register">Register</a></li>
+      <li><a href="#gallery">Moments</a></li>
+      <li><a href="#about">Who we are</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="themeBtn" class="icon-btn" aria-label="Switch light or dark theme">&#9790;</button>
+    <button id="burger" class="icon-btn burger" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+  </nav>
+</header>
+
+<main>
+<!-- ============ HOME ============ -->
+<section id="home" class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="kicker">On the occasion of IEEE Day &middot; Organised by the Dept. of CSE (AIML &amp; CSBS), Institute of Engineering &amp; Management, Salt Lake</p>
+      <h1 class="wordmark">SYNAPSE</h1>
+      <p class="lead">Two rounds, one stage. Prove you know your movies, music and tech in The Big Quiz, then untangle real circuits in Circuit Chaos. Free to enter, with refreshments and a &#8377;10,000 prize pool.</p>
+      <div class="cta">
+        <a class="btn primary" href="#register">Register for free</a>
+        <a class="btn ghost" href="#events">See the schedule</a>
+      </div>
+    </div>
+    <div class="hero-vis" aria-hidden="true">
+      <div class="orbit o1"></div><div class="orbit o2"></div><div class="orbit o3"></div>
+      <div class="core"></div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="count" aria-live="off">
+      <div class="count-head"><h2>Doors open in</h2><p id="cdNote">Tuesday, 13 October 2026, 4:00 pm</p></div>
+      <div class="count-boxes">
+        <div><b id="cdD">00</b><small>days</small></div>
+        <div><b id="cdH">00</b><small>hours</small></div>
+        <div><b id="cdM">00</b><small>minutes</small></div>
+        <div><b id="cdS">00</b><small>seconds</small></div>
+      </div>
+    </div>
+
+    <div class="rounds">
+      <article class="round r1">
+        <h3>Round 1: The Big Quiz</h3>
+        <p>Fast questions across five worlds.</p>
+        <ul class="tags"><li>Movies &amp; web series</li><li>Sports</li><li>Music</li><li>Pop culture</li><li>Tech</li></ul>
+      </article>
+      <article class="round r2">
+        <h3>Round 2: Circuit Chaos</h3>
+        <p>Read the circuit, find the fault, solve it.</p>
+        <ul class="tags"><li>Analyse</li><li>Apply</li><li>Logic</li><li>Solve</li></ul>
+      </article>
+    </div>
+
+    <dl class="facts">
+      <div><dt>Venue</dt><dd>IEM Research Park</dd></div>
+      <div><dt>Date</dt><dd>13 October, 4 pm onwards</dd></div>
+      <div><dt>Prize pool</dt><dd>&#8377;10,000</dd></div>
+      <div><dt>Mode</dt><dd>Offline</dd></div>
+      <div><dt>Refreshments</dt><dd>Included</dd></div>
+      <div><dt>Entry</dt><dd>Free registration</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ============ EVENTS ============ -->
+<section id="events" class="sec">
+  <div class="wrap">
+    <h2 class="sec-title">The evening, hour by hour</h2>
+    <p class="sec-sub">Everything happens at IEM Research Park on 13 October 2026. Timings after the 4 pm start are tentative until the organisers confirm.</p>
+    <ol id="eventList" class="timeline"></ol>
+  </div>
+</section>
+
+<!-- ============ REGISTER ============ -->
+<section id="register" class="sec alt">
+  <div class="wrap reg-grid">
+    <div>
+      <h2 class="sec-title">Save your seat</h2>
+      <p class="sec-sub">Registration is free. Fill every field; mistakes are flagged as you type.</p>
+      <ul class="checks">
+        <li>Roll number must be 10 digits</li>
+        <li>Mobile number must start with 6, 7, 8 or 9</li>
+        <li>Use an email like name@iem.edu.in</li>
+      </ul>
+    </div>
+    <form id="regForm" class="card form" novalidate>
+      <div class="field"><label for="name">Student name</label>
+        <input id="name" type="text" placeholder="e.g. Ananya Sen" autocomplete="name"><span class="err" id="nameErr"></span></div>
+      <div class="two">
+        <div class="field"><label for="roll">Roll number</label>
+          <input id="roll" type="text" inputmode="numeric" maxlength="10" placeholder="10-digit roll no."><span class="err" id="rollErr"></span></div>
+        <div class="field"><label for="dept">Department</label>
+          <select id="dept"><option value="">Select department</option><option>CSE (AIML)</option><option>CSE (CSBS)</option><option>CSE</option><option>IT</option><option>ECE</option><option>EE</option><option>EEE</option><option>Other</option></select><span class="err" id="deptErr"></span></div>
+      </div>
+      <div class="two">
+        <div class="field"><label for="email">Email</label>
+          <input id="email" type="text" placeholder="you@iem.edu.in" autocomplete="email"><span class="err" id="emailErr"></span></div>
+        <div class="field"><label for="phone">Phone number</label>
+          <input id="phone" type="text" inputmode="numeric" maxlength="10" placeholder="10-digit mobile number" autocomplete="tel"><span class="err" id="phoneErr"></span></div>
+      </div>
+      <div class="field"><span class="lab">Gender</span>
+        <div class="radios" id="gender">
+          <label><input type="radio" name="gender" value="Female"> Female</label>
+          <label><input type="radio" name="gender" value="Male"> Male</label>
+          <label><input type="radio" name="gender" value="Other"> Other</label>
+          <label><input type="radio" name="gender" value="Prefer not to say"> Prefer not to say</label>
+        </div><span class="err" id="genderErr"></span></div>
+      <div class="field"><label for="event">Event</label>
+        <select id="event"></select><span class="err" id="eventErr"></span></div>
+      <button class="btn primary" type="submit">Register now</button>
+      <p id="formStatus" class="status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery" class="sec">
+  <div class="wrap">
+    <h2 class="sec-title">Caught on camera</h2>
+    <p class="sec-sub">Frames from the department's past nights of code, circuits and cheering. Hover or tap a frame to read its story.</p>
+    <div id="gal" class="gal"></div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="sec alt">
+  <div class="wrap about-grid">
+    <div>
+      <h2 class="sec-title">The people behind SYNAPSE</h2>
+      <p>SYNAPSE started with a simple idea: engineers should be as quick with a movie quote as with Kirchhoff's laws. A small team of students from the Dept. of CSE (AIML &amp; CSBS) at IEM Salt Lake planned every question, every circuit and every snack table themselves.</p>
+      <p>Our department trains students in machine learning, business systems and software, and we believe the best learning happens outside the classroom, on a stage, with a timer running. This evening is our way of marking IEEE Day.</p>
+      <p>Come as a team of friends or come alone. You will leave knowing more than when you arrived.</p>
+    </div>
+    <div class="card coord">
+      <h3>Coordinators</h3>
+      <dl>
+        <dt>Faculty coordinator</dt><dd>Prof. Bibekananda Kundu</dd>
+        <dt>Student coordinator</dt><dd>Priyam Tibrewal &middot; <a href="tel:+917003100931">7003100931</a></dd>
+        <dt>Student coordinator</dt><dd>Tuhin Nandi &middot; <a href="tel:+918967337959">89673 37959</a></dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="sec">
+  <div class="wrap reg-grid">
+    <div>
+      <h2 class="sec-title">Contact</h2>
+      <p class="sec-sub">Questions about rounds, rules or registration? Write or call us.</p>
+      <address>
+        <strong>Address</strong><br>
+        Dept. of CSE (AIML &amp; CSBS), Institute of Engineering &amp; Management<br>
+        Gurukul Campus, Y-12, Block EP, Sector V, Salt Lake<br>
+        Kolkata 700091, West Bengal, India<br><br>
+        <strong>Email</strong><br><a href="mailto:events.aiml@iem.edu.in">events.aiml@iem.edu.in</a><br><br>
+        <strong>Phone</strong><br><a href="tel:+917003100931">7003100931</a> (Priyam) &nbsp; <a href="tel:+918967337959">89673 37959</a> (Tuhin)<br><br>
+        <strong>Event venue</strong><br>IEM Research Park
+      </address>
+    </div>
+    <form id="fbForm" class="card form" novalidate>
+      <h3>Send feedback</h3>
+      <div class="field"><label for="fbName">Your name</label><input id="fbName" type="text"><span class="err" id="fbNameErr"></span></div>
+      <div class="field"><label for="fbEmail">Email</label><input id="fbEmail" type="text"><span class="err" id="fbEmailErr"></span></div>
+      <div class="field"><label for="fbMsg">Message</label><textarea id="fbMsg" rows="4" placeholder="Tell us what worked and what didn't."></textarea><span class="err" id="fbMsgErr"></span></div>
+      <button class="btn primary" type="submit">Send feedback</button>
+      <p id="fbStatus" class="status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>SYNAPSE 2026 &middot; Dept. of CSE (AIML &amp; CSBS), IEM Salt Lake</span>
+    <a href="#home">Back to top</a>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
